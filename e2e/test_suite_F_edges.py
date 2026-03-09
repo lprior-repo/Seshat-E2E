@@ -17,11 +17,11 @@ def test_edg_001_create_connector_from_node_a_t(page: Page):
 
     # Create node A
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
 
     # Create node B
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(500, 200)
+    icon.drag_to(canvas, target_position={"x": 500, "y": 200})
 
     # Create Edge A to B
     page.locator("[data-testid='tool-edge']").click()
@@ -46,7 +46,7 @@ def test_edg_002_create_connector_from_node_to(page: Page):
 
     # Create node A
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
 
     # Create Edge A to space
     page.locator("[data-testid='tool-edge']").click()
@@ -70,11 +70,11 @@ def test_edg_003_reconnect_edge_endpoint_to_dif(page: Page):
 
     # Nodes A, B, C
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(400, 200)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(400, 400)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 400})
 
     # Edge A to B
     page.locator("[data-testid='tool-edge']").click()
@@ -104,9 +104,9 @@ def test_edg_004_delete_node_with_bound_edge_e(page: Page):
 
     # Nodes A and B
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(400, 200)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
 
     # Edge A to B
     page.locator("[data-testid='tool-edge']").click()
@@ -116,7 +116,7 @@ def test_edg_004_delete_node_with_bound_edge_e(page: Page):
     page.mouse.up()
 
     # Click node A and delete
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
     page.keyboard.press("Backspace")
     page.keyboard.press("Delete")
 
@@ -144,9 +144,9 @@ def test_edg_010_move_node_bound_edges_updat(page: Page):
 
     # Nodes A and B
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(400, 200)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
 
     # Edge A to B
     page.locator("[data-testid='tool-edge']").click()
@@ -176,9 +176,9 @@ def test_edg_011_resize_node_binding_recalcu(page: Page):
 
     # Nodes A and B
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(400, 200)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
 
     # Edge A to B
     page.locator("[data-testid='tool-edge']").click()
@@ -189,7 +189,7 @@ def test_edg_011_resize_node_binding_recalcu(page: Page):
 
     # Resize Node A
     # Click to select, then drag from an arbitrary bottom-right offset
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
     page.mouse.move(250, 250)
     page.mouse.down()
     page.mouse.move(300, 300)
@@ -237,9 +237,9 @@ def test_edg_015_multi_select_resize_where_only(page: Page):
 
     # Nodes A and B
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(400, 200)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
 
     # Edge A to B
     page.locator("[data-testid='tool-edge']").click()
@@ -250,8 +250,8 @@ def test_edg_015_multi_select_resize_where_only(page: Page):
 
     # Multi-select nodes A and B
     page.keyboard.down("Shift")
-    page.mouse.click(200, 200)
-    page.mouse.click(400, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
     page.keyboard.up("Shift")
 
     # Resize selection
@@ -275,9 +275,9 @@ def test_edg_016_multi_select_includes_edge_but(page: Page):
 
     # Nodes A and B
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(200, 200)
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
     icon = page.locator("[data-testid='icon-item']").first
-    page.mouse.click(400, 200)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
 
     # Edge A to B
     page.locator("[data-testid='tool-edge']").click()

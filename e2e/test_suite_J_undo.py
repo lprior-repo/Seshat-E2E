@@ -171,11 +171,16 @@ def test_his_006_connector_create_then_undo_ed(page: Page):
     icon.drag_to(canvas, target_position={"x": 400, "y": 200})
 
     page.locator("[data-testid='tool-edge']").click()
-    canvas_box = canvas.bounding_box()
-    assert canvas_box is not None
-    page.mouse.move(canvas_box["x"] + 200, canvas_box["y"] + 200)
+    nodes = canvas.locator("[data-node-kind='node']")
+    expect(nodes).to_have_count(2)
+    node1_box = nodes.nth(0).bounding_box()
+    node2_box = nodes.nth(1).bounding_box()
+    assert node1_box is not None
+    assert node2_box is not None
+    
+    page.mouse.move(node1_box["x"] + node1_box["width"] / 2, node1_box["y"] + node1_box["height"] / 2)
     page.mouse.down()
-    page.mouse.move(canvas_box["x"] + 400, canvas_box["y"] + 200, steps=10)
+    page.mouse.move(node2_box["x"] + node2_box["width"] / 2, node2_box["y"] + node2_box["height"] / 2, steps=10)
     page.mouse.up()
     page.wait_for_timeout(100)
 
