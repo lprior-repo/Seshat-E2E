@@ -4,17 +4,15 @@ import time
 
 # Auto-generated from Catalog Section: N_performance
 
+
 def test_perf_001_5k_nodes_5k_edges_pan_zoom(page: Page):
     """
     ID: PERF-001
     Type: [E]
     Description: 5k nodes + 5k edges: pan/zoom stays responsive; no memory explosion.
     """
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for PERF-001
-    pass
+    pytest.skip("Out of scope: Requires large payload generation and memory profiling.")
+
 
 def test_perf_002_box_select_on_10k_elements_com(page: Page):
     """
@@ -22,11 +20,8 @@ def test_perf_002_box_select_on_10k_elements_com(page: Page):
     Type: [E]
     Description: Box-select on 10k elements completes quickly; selection set correct.
     """
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for PERF-002
-    pass
+    pytest.skip("Out of scope: Requires large payload generation and memory profiling.")
+
 
 def test_perf_003_layout_routing_recompute_is_o(page: Page):
     """
@@ -36,11 +31,8 @@ def test_perf_003_layout_routing_recompute_is_o(page: Page):
     """
     # Note: This is marked as Unit/Integration in the catalog.
     # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for PERF-003
-    pass
+    pytest.skip("Out of scope: Requires large payload generation and memory profiling.")
+
 
 def test_perf_004_undo_redo_on_large_scene_is_fa(page: Page):
     """
@@ -48,11 +40,8 @@ def test_perf_004_undo_redo_on_large_scene_is_fa(page: Page):
     Type: [E]
     Description: Undo/redo on large scene is fast; no incremental corruption.
     """
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for PERF-004
-    pass
+    pytest.skip("Out of scope: Requires large payload generation and memory profiling.")
+
 
 def test_perf_005_import_export_large_doc_comple(page: Page):
     """
@@ -60,11 +49,8 @@ def test_perf_005_import_export_large_doc_comple(page: Page):
     Type: [E]
     Description: Import/export large doc completes or fails gracefully.
     """
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for PERF-005
-    pass
+    pytest.skip("Out of scope: Requires large payload generation and memory profiling.")
+
 
 def test_perf_006_continuous_drag_for_30s_doesn(page: Page):
     """
@@ -72,11 +58,8 @@ def test_perf_006_continuous_drag_for_30s_doesn(page: Page):
     Type: [E]
     Description: Continuous drag for 30s doesn't leak memory (profiling gate).
     """
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for PERF-006
-    pass
+    pytest.skip("Out of scope: Requires large payload generation and memory profiling.")
+
 
 def test_perf_007_fuzz_test_random_operations_m(page: Page):
     """
@@ -86,9 +69,4 @@ def test_perf_007_fuzz_test_random_operations_m(page: Page):
     """
     # Note: This is marked as Unit/Integration in the catalog.
     # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for PERF-007
-    pass
-
+    pytest.skip("Out of scope: Requires large payload generation and memory profiling.")

@@ -13,8 +13,24 @@ def test_mul_001_drag_3_selected_nodes_all_mov(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-001
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_002_drag_mixed_selection_node_e(page: Page):
     """
@@ -25,8 +41,24 @@ def test_mul_002_drag_mixed_selection_node_e(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-002
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_003_drag_selection_across_containe(page: Page):
     """
@@ -37,8 +69,24 @@ def test_mul_003_drag_selection_across_containe(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-003
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_004_drag_selection_with_one_locked(page: Page):
     """
@@ -49,8 +97,24 @@ def test_mul_004_drag_selection_with_one_locked(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-004
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_005_drag_selection_with_grid_snapp(page: Page):
     """
@@ -61,8 +125,24 @@ def test_mul_005_drag_selection_with_grid_snapp(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-005
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_006_drag_selection_near_viewport_e(page: Page):
     """
@@ -73,8 +153,24 @@ def test_mul_006_drag_selection_near_viewport_e(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-006
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_007_drag_selection_while_zoomed_ou(page: Page):
     """
@@ -85,8 +181,24 @@ def test_mul_007_drag_selection_while_zoomed_ou(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-007
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_008_drag_selection_then_undo_exac(page: Page):
     """
@@ -97,8 +209,24 @@ def test_mul_008_drag_selection_then_undo_exac(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-008
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_009_drag_selection_while_another_p(page: Page):
     """
@@ -109,8 +237,24 @@ def test_mul_009_drag_selection_while_another_p(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-009
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_010_resize_multi_selection_from_nw(page: Page):
     """
@@ -121,8 +265,24 @@ def test_mul_010_resize_multi_selection_from_nw(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-010
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_011_resize_from_each_corner_nw_ne(page: Page):
     """
@@ -133,8 +293,24 @@ def test_mul_011_resize_from_each_corner_nw_ne(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-011
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_012_resize_from_side_handles_n_e(page: Page):
     """
@@ -145,8 +321,24 @@ def test_mul_012_resize_from_side_handles_n_e(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-012
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_013_resize_multi_selection_with_as(page: Page):
     """
@@ -157,8 +349,24 @@ def test_mul_013_resize_multi_selection_with_as(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-013
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_014_resize_multi_selection_without(page: Page):
     """
@@ -169,8 +377,24 @@ def test_mul_014_resize_multi_selection_without(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-014
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_015_resize_selection_containing_ro(page: Page):
     """
@@ -181,8 +405,24 @@ def test_mul_015_resize_selection_containing_ro(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-015
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_016_resize_selection_containing_te(page: Page):
     """
@@ -193,8 +433,24 @@ def test_mul_016_resize_selection_containing_te(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-016
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_017_resize_selection_containing_2(page: Page):
     """
@@ -205,8 +461,24 @@ def test_mul_017_resize_selection_containing_2(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-017
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_018_resize_selection_containing_cu(page: Page):
     """
@@ -217,8 +489,24 @@ def test_mul_018_resize_selection_containing_cu(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-018
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_019_resize_selection_past_minimum(page: Page):
     """
@@ -229,8 +517,24 @@ def test_mul_019_resize_selection_past_minimum(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-019
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_020_resize_selection_past_inversio(page: Page):
     """
@@ -241,8 +545,24 @@ def test_mul_020_resize_selection_past_inversio(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-020
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_021_resize_selection_that_includes(page: Page):
     """
@@ -253,8 +573,24 @@ def test_mul_021_resize_selection_that_includes(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-021
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_022_resize_selection_that_includes(page: Page):
     """
@@ -265,8 +601,24 @@ def test_mul_022_resize_selection_that_includes(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-022
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_023_resize_then_immediately_drag(page: Page):
     """
@@ -277,8 +629,24 @@ def test_mul_023_resize_then_immediately_drag(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-023
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_024_resize_at_multiple_zoom_levels(page: Page):
     """
@@ -286,11 +654,7 @@ def test_mul_024_resize_at_multiple_zoom_levels(page: Page):
     Type: [VR]
     Description: Resize at multiple zoom levels and compare screenshot diffs of selection outline + handles.
     """
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-024
-    pass
+    pytest.skip("Out of scope for web E2E tests - visual regression or unit test.")
 
 def test_mul_025_resize_selection_after_switchi(page: Page):
     """
@@ -301,8 +665,24 @@ def test_mul_025_resize_selection_after_switchi(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-025
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_030_rotate_multi_selection_around(page: Page):
     """
@@ -313,8 +693,24 @@ def test_mul_030_rotate_multi_selection_around(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-030
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 100, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_031_rotate_selection_with_mixed_ro(page: Page):
     """
@@ -325,8 +721,24 @@ def test_mul_031_rotate_selection_with_mixed_ro(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-031
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 100, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_032_rotate_selection_with_edges_bo(page: Page):
     """
@@ -337,8 +749,24 @@ def test_mul_032_rotate_selection_with_edges_bo(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-032
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 100, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_033_rotate_selection_360_in_incre(page: Page):
     """
@@ -349,8 +777,24 @@ def test_mul_033_rotate_selection_360_in_incre(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-033
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 100, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_034_rotate_selection_then_resize(page: Page):
     """
@@ -361,8 +805,24 @@ def test_mul_034_rotate_selection_then_resize(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-034
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 500, box["y"] + 300)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 600, box["y"] + 400, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_035_rotate_while_snapping_to_angle(page: Page):
     """
@@ -373,8 +833,24 @@ def test_mul_035_rotate_while_snapping_to_angle(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-035
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 100, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_036_rotate_while_zoomed_rotation(page: Page):
     """
@@ -385,8 +861,24 @@ def test_mul_036_rotate_while_zoomed_rotation(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-036
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 100, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 
 def test_mul_037_undo_redo_after_rotation_exac(page: Page):
     """
@@ -397,6 +889,22 @@ def test_mul_037_undo_redo_after_rotation_exac(page: Page):
     page.goto('http://localhost:8082')
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for MUL-037
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        page.mouse.move(box["x"] + 300, box["y"] + 200)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 400, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
 

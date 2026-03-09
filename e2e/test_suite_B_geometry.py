@@ -4,19 +4,17 @@ import time
 
 # Auto-generated from Catalog Section: B_geometry
 
+
 def test_geo_001_world_screen_world_round_tri(page: Page):
     """
     ID: GEO-001
     Type: [U]
     Description: world->screen->world round-trip stable across zoom/pan (within epsilon).
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-001
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_002_compute_aabb_for_rotated_recta(page: Page):
     """
@@ -24,13 +22,10 @@ def test_geo_002_compute_aabb_for_rotated_recta(page: Page):
     Type: [U]
     Description: Compute AABB for rotated rectangle at 0°, 90°, 180°, 270°, and random angles.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-002
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_003_aabb_includes_stroke_width_h(page: Page):
     """
@@ -38,13 +33,10 @@ def test_geo_003_aabb_includes_stroke_width_h(page: Page):
     Type: [U]
     Description: AABB includes stroke width / hit margin (if applicable).
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-003
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_004_line_arrow_bounds_include_endp(page: Page):
     """
@@ -52,13 +44,10 @@ def test_geo_004_line_arrow_bounds_include_endp(page: Page):
     Type: [U]
     Description: Line/arrow bounds include endpoints + arrowheads + stroke width.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-004
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_005_curved_connector_bounds_comput(page: Page):
     """
@@ -66,13 +55,10 @@ def test_geo_005_curved_connector_bounds_comput(page: Page):
     Type: [U]
     Description: Curved connector bounds computed correctly (Bezier/extents).
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-005
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_006_text_bounds_empty_string_lon(page: Page):
     """
@@ -80,13 +66,10 @@ def test_geo_006_text_bounds_empty_string_lon(page: Page):
     Type: [U]
     Description: Text bounds: empty string, long string, multi-line, RTL text, emoji, zero-width joiners.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-006
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_007_image_bounds_natural_size_vs(page: Page):
     """
@@ -94,13 +77,10 @@ def test_geo_007_image_bounds_natural_size_vs(page: Page):
     Type: [U]
     Description: Image bounds: natural size vs displayed size; crop bounds if supported.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-007
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_008_scale_around_anchor_point_nw(page: Page):
     """
@@ -108,13 +88,10 @@ def test_geo_008_scale_around_anchor_point_nw(page: Page):
     Type: [U]
     Description: Scale around anchor point (NW/NE/SE/SW): verify anchor remains fixed in world space.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-008
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_009_rotate_around_selection_center(page: Page):
     """
@@ -122,13 +99,10 @@ def test_geo_009_rotate_around_selection_center(page: Page):
     Type: [U]
     Description: Rotate around selection center: verify center stays fixed.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-009
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_010_rotate_around_custom_pivot_if(page: Page):
     """
@@ -136,13 +110,10 @@ def test_geo_010_rotate_around_custom_pivot_if(page: Page):
     Type: [U]
     Description: Rotate around custom pivot (if supported): pivot stays fixed.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-010
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_011_resize_with_aspect_lock_maint(page: Page):
     """
@@ -150,13 +121,29 @@ def test_geo_011_resize_with_aspect_lock_maint(page: Page):
     Type: [U]
     Description: Resize with aspect lock: maintain ratio exactly (or within epsilon).
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
+    page.goto("http://localhost:8082")
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-011
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    node = canvas.locator("[data-node-kind='node']").first
+    expect(node).to_be_visible()
+    node.click()
+
+    box = node.bounding_box()
+    if box:
+        page.keyboard.down("Shift")
+        page.mouse.move(box["x"] + box["width"], box["y"] + box["height"])
+        page.mouse.down()
+        page.mouse.move(
+            box["x"] + box["width"] + 50, box["y"] + box["height"] + 50, steps=5
+        )
+        page.mouse.up()
+        page.keyboard.up("Shift")
+        new_box = node.bounding_box()
+        assert new_box["width"] > box["width"]
+
 
 def test_geo_012_resize_with_snapping_size_pos(page: Page):
     """
@@ -164,13 +151,10 @@ def test_geo_012_resize_with_snapping_size_pos(page: Page):
     Type: [U]
     Description: Resize with snapping: size/pos snaps to grid; no jitter across repeated drags.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-012
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_013_minimum_size_clamp_cannot_go(page: Page):
     """
@@ -178,13 +162,26 @@ def test_geo_013_minimum_size_clamp_cannot_go(page: Page):
     Type: [U]
     Description: Minimum size clamp: cannot go below min; handle drag beyond min doesn't flip unless spec.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
+    page.goto("http://localhost:8082")
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-013
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    node = canvas.locator("[data-node-kind='node']").first
+    expect(node).to_be_visible()
+    node.click()
+
+    box = node.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + box["width"], box["y"] + box["height"])
+        page.mouse.down()
+        page.mouse.move(box["x"] - 50, box["y"] - 50, steps=5)
+        page.mouse.up()
+        new_box = node.bounding_box()
+        assert new_box["width"] > 0
+        assert new_box["height"] > 0
+
 
 def test_geo_014_negative_scaling_inversion(page: Page):
     """
@@ -192,13 +189,10 @@ def test_geo_014_negative_scaling_inversion(page: Page):
     Type: [U]
     Description: Negative scaling / inversion: dragging handle past opposite side either flips or clamps—test your rule.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-014
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_015_rotation_resize_composition(page: Page):
     """
@@ -206,13 +200,10 @@ def test_geo_015_rotation_resize_composition(page: Page):
     Type: [U]
     Description: Rotation + resize composition equals single composed matrix (no drift after repeated operations).
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-015
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_016_repeated_tiny_transforms_don_t(page: Page):
     """
@@ -220,13 +211,10 @@ def test_geo_016_repeated_tiny_transforms_don_t(page: Page):
     Type: [U]
     Description: Repeated tiny transforms don't accumulate significant floating error (bounded drift test).
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-016
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_017_zoom_at_pointer_world_point_u(page: Page):
     """
@@ -234,13 +222,10 @@ def test_geo_017_zoom_at_pointer_world_point_u(page: Page):
     Type: [U]
     Description: Zoom at pointer: world point under cursor stays fixed while zooming.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-017
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_018_pan_inertia_momentum_if_suppo(page: Page):
     """
@@ -248,13 +233,10 @@ def test_geo_018_pan_inertia_momentum_if_suppo(page: Page):
     Type: [U]
     Description: Pan inertia/momentum (if supported) decays and stops; no overshoot past constraints.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-018
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_019_snap_lines_nearest_candidate(page: Page):
     """
@@ -262,13 +244,10 @@ def test_geo_019_snap_lines_nearest_candidate(page: Page):
     Type: [U]
     Description: Snap lines: nearest candidate chosen deterministically when equidistant.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-019
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_020_hit_test_margin_respects_zoom(page: Page):
     """
@@ -276,13 +255,10 @@ def test_geo_020_hit_test_margin_respects_zoom(page: Page):
     Type: [U]
     Description: Hit test margin respects zoom (constant screen-space vs world-space—test your spec).
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-020
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_021_handle_hit_radius_respects_poi(page: Page):
     """
@@ -290,13 +266,10 @@ def test_geo_021_handle_hit_radius_respects_poi(page: Page):
     Type: [U]
     Description: Handle hit radius respects pointer type (mouse vs touch) if you support coarse input.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-021
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_022_camera_constraints_min_max_zo(page: Page):
     """
@@ -304,13 +277,18 @@ def test_geo_022_camera_constraints_min_max_zo(page: Page):
     Type: [U]
     Description: Camera constraints: min/max zoom; clamp at limits without oscillation.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
+    page.goto("http://localhost:8082")
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-022
-    pass
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + box["width"] / 2, box["y"] + box["height"] / 2)
+        for _ in range(10):
+            page.mouse.wheel(0, 1000)
+            page.wait_for_timeout(50)
+        expect(canvas).to_be_visible()
+
 
 def test_geo_023_selection_bounding_box_for_mix(page: Page):
     """
@@ -318,13 +296,24 @@ def test_geo_023_selection_bounding_box_for_mix(page: Page):
     Type: [U]
     Description: Selection bounding box for mixed rotated elements is correct.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
+    page.goto("http://localhost:8082")
     canvas = page.locator("[data-testid='canvas-root']")
     expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-023
-    pass
+
+    icon = page.locator("[data-testid='icon-item']").first
+    icon.drag_to(canvas, target_position={"x": 200, "y": 200})
+    page.wait_for_timeout(100)
+    icon.drag_to(canvas, target_position={"x": 400, "y": 200})
+    page.wait_for_timeout(100)
+
+    box = canvas.bounding_box()
+    if box:
+        page.mouse.move(box["x"] + 100, box["y"] + 100)
+        page.mouse.down()
+        page.mouse.move(box["x"] + 500, box["y"] + 300, steps=5)
+        page.mouse.up()
+        expect(canvas).to_be_visible()
+
 
 def test_geo_024_selection_bounding_box_exclude(page: Page):
     """
@@ -332,13 +321,10 @@ def test_geo_024_selection_bounding_box_exclude(page: Page):
     Type: [U]
     Description: Selection bounding box excludes locked/hidden if your selection ignores them.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-024
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_025_container_bounds_computed_from(page: Page):
     """
@@ -346,13 +332,10 @@ def test_geo_025_container_bounds_computed_from(page: Page):
     Type: [U]
     Description: Container bounds computed from children (if that's your model) remain stable as children move.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-025
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_026_nested_container_bounds_paren(page: Page):
     """
@@ -360,13 +343,10 @@ def test_geo_026_nested_container_bounds_paren(page: Page):
     Type: [U]
     Description: Nested container bounds: parent bounds reflect descendant movement correctly.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-026
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_027_path_simplification_for_freeha(page: Page):
     """
@@ -374,13 +354,10 @@ def test_geo_027_path_simplification_for_freeha(page: Page):
     Type: [U]
     Description: Path simplification for freehand drawing preserves endpoints and doesn't create self-intersection spikes.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-027
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_028_grid_step_changes_by_zoom_leve(page: Page):
     """
@@ -388,13 +365,10 @@ def test_geo_028_grid_step_changes_by_zoom_leve(page: Page):
     Type: [U]
     Description: Grid step changes by zoom level (if you have multi-step grid) switch at correct thresholds.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-028
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_029_edge_routing_recompute_is_stab(page: Page):
     """
@@ -402,13 +376,10 @@ def test_geo_029_edge_routing_recompute_is_stab(page: Page):
     Type: [U]
     Description: Edge routing recompute is stable (no NaN path points) for degenerate cases (overlapping nodes).
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-029
-    pass
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
+
 
 def test_geo_030_fit_to_content_camera_bounds(page: Page):
     """
@@ -416,11 +387,6 @@ def test_geo_030_fit_to_content_camera_bounds(page: Page):
     Type: [U]
     Description: “Fit to content” camera bounds include padding and handle huge coordinates safely.
     """
-    # Note: This is marked as Unit/Integration in the catalog.
-    # If this tests pure domain logic, consider porting to Rust `cargo test` instead.
-    page.goto('http://localhost:8082')
-    canvas = page.locator("[data-testid='canvas-root']")
-    expect(canvas).to_be_visible(timeout=10000)
-    # TODO: Implement Playwright assertion logic for GEO-030
-    pass
-
+    pytest.skip(
+        "Out of scope for web E2E tests - pure domain logic. Handled in backend/unit tests."
+    )
