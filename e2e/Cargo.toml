@@ -1,0 +1,12 @@
+[package]
+name = "seshat-e2e-tests"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+playwright-rs = "0.8.4"
+tokio = { version = "1", features = ["full"] }
+reqwest = "0.12"
+
+[dependencies]
+serde_json = "1.0.149"
